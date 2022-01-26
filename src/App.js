@@ -14,8 +14,8 @@ function App() {
   // traffic is complicated. It should be an array of strings that starts out as ['car', 'truck']
   const [traffic, setTraffic] = useState(['car', 'truck']);
 
-  const lizardStyle = { fontSize: `${lizardSize}rem` };
-  const alienStyle = { fontSize: `${alienSize}rem` };
+  // const lizardStyle = { fontSize: `${lizardSize}rem` };
+  // const alienStyle = { fontSize: `${alienSize}rem` };
   
   function handleAddCar() {
     setTraffic([...traffic, 'car']);
@@ -26,9 +26,12 @@ function App() {
   function handleAddBus() {
     setTraffic([...traffic, 'bus']);
   }
-  function removeLastVehicle() {
-    setTraffic(traffic.slice(0, traffic.length - 1));
+  function handleAddMotorcycle() {
+    setTraffic([...traffic, 'motorcycle']);
   }
+  // function removeLastVehicle() {
+  //   setTraffic(traffic.slice(0, traffic.length - 1));
+  // }
 
   return (
     <div className="App">
@@ -57,11 +60,11 @@ function App() {
       <TrafficLight color={lightColor} />
       <div className="buttons">
         {/* when you click this button, the color of the light in state should be set to 'red' */}
-        <button>Red</button>
+        <button onClick={() => setLightColor('red')}>Red</button>
         {/* when you click this button, the color of the light in state should be set to 'yellow' */}
-        <button>Yellow</button>
+        <button onClick={() => setLightColor('yellow')}>Yellow</button>
         {/* when you click this button, the color of the light in state should be set to 'green' */}
-        <button>Green</button>
+        <button onClick={() => setLightColor('green')}>Green</button>
       </div>
       {/* 
       the VehicleList component takes in one prop: vehicles.
