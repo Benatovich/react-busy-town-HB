@@ -29,9 +29,9 @@ function App() {
   function handleAddMotorcycle() {
     setTraffic([...traffic, 'motorcycle']);
   }
-  // function removeLastVehicle() {
-  //   setTraffic(traffic.slice(0, traffic.length - 1));
-  // }
+  function removeLastVehicle() {
+    setTraffic(traffic.slice(0, traffic.length - 1));
+  }
 
   return (
     <div className="App">
@@ -82,6 +82,9 @@ function App() {
         <button onClick={handleAddTruck}>Truck</button>
         {/* On click, you should set the traffic in state to be a copy of the same array that's already in state, but immutably add a 'motorcycle' to the end */}
         <button onClick={handleAddMotorcycle}>Motorcycle</button>
+        <div className='remove'>
+          <button onClick={removeLastVehicle}>Clear some traffic</button>
+        </div>
       </div>
 
     </div>
