@@ -1,5 +1,5 @@
 import Vehicle from './Vehicle';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 test('if bus button has been pressed, div has className "bus"', () => {
   const bus = 'bus';

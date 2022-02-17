@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 export default function Vehicle(props) {
   // const [traffic, setTraffic] = useState(['car', 'truck']);
 
