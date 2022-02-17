@@ -17,5 +17,4 @@ test('LightColor turns yellow', () => {
 
 
 
-// 2: <button onClick={() => setAlienSize(alienSize + 1)}>Oh no! The alien is gobblin up all the electricity!</button>
-
+// 2: <button onClick={handleAddTruck}>Truck</button>
